@@ -1,0 +1,34 @@
+<div class="container">
+    <h1>Rooms#show</h1>
+    <p>Find me in app/views/rooms/show.html.erb</p>
+    <div>
+        <%= link_to "Retour à la page des chambres", rooms_path %>
+    </div>
+
+    <h2>Détails de la chambre </h2>
+    <div class="room">
+
+        <div class="card_room">
+            <div class="img_room">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                alt="Photo appartement">
+            </div>
+
+            <div class="info_room">
+                <h3>Chambre N° <%= @room.id %></h3>
+                <p>
+                    <strong><%= @room.price_per_night %> €</strong> par nuit <br>
+                    Nombre de place : </span><span><%= @room.capacity %>
+                 </p>
+            </div>
+        </div>
+
+        <div class="room_reza">
+            <%= render "shared/reservation" %>
+        </div>
+    </div>
+
+</div>
+
+
+
